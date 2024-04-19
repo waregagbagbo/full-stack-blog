@@ -17,17 +17,17 @@ class PostAdmin(admin.ModelAdmin):
     
     list_display =(
         'id',
-        'title','subtitle','slug','publish_date','published',
+        'title','slug','publish_date','published',
     )
     list_filter =(
         'published','publish_date',
     )
     
     list_editable =(
-        'title','subtitle','slug','publish_date'
-,'published')
+        'title','slug','publish_date','published')
+    
     prepopulated_fields ={
         "slug":("title","subtitle")   }
     
     date_hierarchy ="publish_date"
-    save_on_top = True
+    save_on_top = False
