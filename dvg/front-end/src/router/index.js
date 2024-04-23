@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import AuthorView from '../views/AuthorView.vue'
+import AuthorView from "../views/AuthorView.vue";
 import AllPostsView from "../views/AllPostsView.vue";
 import PostView from "../views/PostView.vue";
 //import PostsByTagView from "../views/PostsByTagView.vue";
