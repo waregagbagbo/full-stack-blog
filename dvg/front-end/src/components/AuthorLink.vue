@@ -2,7 +2,7 @@
 import {computed} from "vue";
 import {RouterLink} from "vue-router";
 
-const props = defineProps(["authour"]);
+const props = defineProps(["author"]);
 const firstName = props.author.user.firstName;
 const lastName = props.author.user.lastName;
 const displayName = computed(() => {

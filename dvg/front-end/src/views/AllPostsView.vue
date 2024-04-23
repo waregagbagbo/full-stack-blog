@@ -1,10 +1,16 @@
 <script>
 import PostList from "../components/PostList.vue";
+
+const  {result, loading, error} = {
+    error: {messgae: "No connection to the GraphQL API yet."},
+};
 </script>
 
 <template>
     <h2>Recent Posts</h2>
-    <PostsList />
+    <div v-if="loading">Loading...</div>
+    <div v-else-if="error" class="warn"></div>
+    <PostsList  v-else :posts="result.allPosts" />
     
 </template>
 
