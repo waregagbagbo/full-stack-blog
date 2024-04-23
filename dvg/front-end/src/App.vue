@@ -10,9 +10,8 @@ import { RouterLink, RouterView } from 'vue-router';
       <h1>FullStack Blog</h1>
       <nav>
         <RouterLink to="/">Posts</RouterLink>
-        <RouterLink to="{name: 'author'}">Author</RouterLink>
-        <RouterLink to="{name: 'post'}">Post</RouterLink>
-        <RouterLink to="{name: 'tag'}">Tag</RouterLink>
+        <!--A section to add items on the menu-->
+      <!--<RouterLink to="{name: 'author'}">Author</RouterLink>-->
       </nav>
     </div>
   </header>

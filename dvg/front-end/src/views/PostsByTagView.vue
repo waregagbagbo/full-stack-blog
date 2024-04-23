@@ -3,7 +3,7 @@ import PostList from "../components/PostList.vue";
 import {useRoute} from "vue-router";
 
 const route = useRoute();
-const tag  route.params.tag;
+const tag = route.params.tag;
 const {result, loading, error} = {
     error: {message: "No connection to the GraphQ API yet."},
 
