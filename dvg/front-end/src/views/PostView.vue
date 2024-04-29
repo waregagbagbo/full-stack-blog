@@ -1,11 +1,27 @@
 <script>
 import AuthorLink from "../components/AuthorLink.vue";
+import {useRoute} from "vue-router";
+import {useQuery} from "@vue/apollo-composable";
+import gql from "graphql-tag";
 
 const dateFormatter = new Intl.DateTimeFormat("en-US",{dateStyle: "full"});
 const displayableDate =(date) => dateFormatter.format(new Date(date));
-const {result, loading, error} ={
-    error: {message: "NO connection to the GraphQL API yet."}
-};
+const route = useROute();
+const slug = route.params.slug;
+const {result, loading, error} = useQuery(gql`
+query{
+    postBySlug(
+        slug: "${slug}"
+    ){
+        title
+        subtitle
+        publishDate
+        published
+        metaDescription
+        slug
+
+    }
+}`);
 </script>
 
 <template>
